@@ -7,6 +7,7 @@ ObjC.import('Cocoa');
 function run(argv) {
   const app = $.NSApplication.sharedApplication;
   app.setActivationPolicy($.NSApplicationActivationPolicyAccessory);
+  installEditMenu(app);
 
   const alert = $.NSAlert.alloc.init;
   alert.messageText = '키체인 저장';
@@ -59,4 +60,24 @@ function run(argv) {
     out[f.out] = inputs[i].stringValue.js.replace(/[\r\n]+/g, ' ');
   });
   return out.join('\n');
+}
+
+// ⌘X · ⌘C · ⌘V · ⌘A · ⌘Z 는 메뉴 막대의 편집 메뉴 단축키로 동작한다.
+// osascript 로 띄운 창에는 메뉴 막대가 없어 이 메뉴를 직접 붙이지 않으면 단축키 붙여넣기가 되지 않는다
+function installEditMenu(app) {
+  const mainMenu = $.NSMenu.alloc.init;
+  const editItem = $.NSMenuItem.alloc.init;
+  const editMenu = $.NSMenu.alloc.initWithTitle('편집');
+  [
+    ['실행 취소', 'undo:', 'z'],
+    ['잘라내기', 'cut:', 'x'],
+    ['복사', 'copy:', 'c'],
+    ['붙여넣기', 'paste:', 'v'],
+    ['모두 선택', 'selectAll:', 'a'],
+  ].forEach(([title, action, key]) => {
+    editMenu.addItemWithTitleActionKeyEquivalent(title, action, key);
+  });
+  editItem.submenu = editMenu;
+  mainMenu.addItem(editItem);
+  app.mainMenu = mainMenu;
 }

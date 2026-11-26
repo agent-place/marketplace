@@ -11,11 +11,18 @@
       "displayName": "Keychain Secrets",
       "source": "./plugins/keychain-secrets",
       "description": "macOS 키체인의 env/<NAME> 항목을 <NAME>_USER · <NAME>_PW · <NAME>_URL · <NAME>_MEMO 환경 변수로 쓰는 비밀 값 관리 스킬. 입력창 저장, 목록, 이름 변경, 메모 기반 사용 제약을 지원한다.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "agent-place"
       },
-      "keywords": ["macos", "keychain", "secrets", "environment-variables", "api-token", "claude-code"],
+      "keywords": [
+        "macos",
+        "keychain",
+        "secrets",
+        "environment-variables",
+        "api-token",
+        "claude-code"
+      ],
       "category": "security"
     }
   ]

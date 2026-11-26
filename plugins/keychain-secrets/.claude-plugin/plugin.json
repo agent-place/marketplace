@@ -1,7 +1,7 @@
 {
   "name": "keychain-secrets",
   "displayName": "Keychain Secrets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "macOS 키체인의 env/<NAME> 항목을 <NAME>_USER · <NAME>_PW · <NAME>_URL · <NAME>_MEMO 환경 변수로 쓰는 비밀 값 관리 스킬. 비밀 값은 대화로 받지 않고 입력창으로 받으며, 출력 · 파일 저장하지 않는다. macOS 전용.",
   "author": {
     "name": "agent-place"
