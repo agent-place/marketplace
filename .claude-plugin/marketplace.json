@@ -1,0 +1,22 @@
+{
+  "name": "ai-agentplaces",
+  "owner": {
+    "name": "ai-agentplaces"
+  },
+  "description": "Claude Code 용 범용 스킬 모음. 스킬마다 플러그인 하나로 등록해 필요한 것만 골라 설치한다.",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "keychain-secrets",
+      "displayName": "Keychain Secrets",
+      "source": "./plugins/keychain-secrets",
+      "description": "macOS 키체인의 env/<NAME> 항목을 <NAME>_USER · <NAME>_PW · <NAME>_URL · <NAME>_MEMO 환경 변수로 쓰는 비밀 값 관리 스킬. 입력창 저장, 목록, 이름 변경, 메모 기반 사용 제약을 지원한다.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ai-agentplaces"
+      },
+      "keywords": ["macos", "keychain", "secrets", "environment-variables", "api-token", "claude-code"],
+      "category": "security"
+    }
+  ]
+}
