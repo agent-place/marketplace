@@ -11,8 +11,8 @@ macOS 로그인 키체인에 비밀 값을 `env/<NAME>` 규칙으로 저장하�
 ## 설치
 
 ```
-/plugin marketplace add ai-agentplaces/marketplace
-/plugin install keychain-secrets@ai-agentplaces
+/plugin marketplace add agent-place/marketplace
+/plugin install keychain-secrets@agent-place
 ```
 
 플러그인 없이 쓰려면 `skills/keychain-secrets` 폴더를 `~/.claude/skills/` 에 복사한다.

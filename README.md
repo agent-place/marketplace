@@ -1,4 +1,4 @@
-# ai-agentplaces marketplace
+# agent-place marketplace
 
 Claude Code 용 범용 스킬 모음이다.
 스킬마다 플러그인 하나로 등록되어 있어 필요한 것만 골라 설치한다.
@@ -8,8 +8,8 @@ Claude Code 용 범용 스킬 모음이다.
 Claude Code 에서 마켓플레이스를 한 번 추가한 뒤, 원하는 플러그인을 설치한다.
 
 ```
-/plugin marketplace add ai-agentplaces/marketplace
-/plugin install keychain-secrets@ai-agentplaces
+/plugin marketplace add agent-place/marketplace
+/plugin install keychain-secrets@agent-place
 ```
 
 업데이트는 `/plugin` 메뉴의 Marketplaces 에서 받는다.
